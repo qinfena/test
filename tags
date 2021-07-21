@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CORVID_NAME	enum.c	4;"	d	file:
+DAYS_DEFORE	year.c	10;"	d	file:
+MAX	test.h	4;"	d
+RATIONAL_H	rational.h	2;"	d
+Strtoul	hexatridecimal.c	/^unsigned long Strtoul (char const s[static 1], unsigned base) {$/;"	f
+Strtoul_inner	hexatridecimal.c	/^unsigned long Strtoul_inner(char const s[static 1],$/;"	f
+__TEST_H__	test.h	2;"	d
+buf_max	stdout_file.c	/^enum {buf_max = 32, };$/;"	e	enum:__anon1	file:
+denom	rational.h	/^	size_t denom;$/;"	m	struct:rat
+fgets_manually	fgets.c	/^char * fgets_manually(char s[restrict], int n,$/;"	f
+fib	fibonnacci.c	/^size_t fib(size_t n) {$/;"	f
+fib2	fibonnacci.c	/^size_t fib2(size_t n) {$/;"	f
+fib2rec	fibonnacci.c	/^void fib2rec(size_t n, size_t buf[2]){$/;"	f
+fibCache	fibonnacci.c	/^size_t fibCache(size_t n){$/;"	f
+fibCacheRec	fibonnacci.c	/^size_t fibCacheRec (size_t n, size_t cache[n]) {$/;"	f
+gcd	euclid.c	/^size_t gcd(size_t a, size_t b) {$/;"	f
+gcd	rational.c	/^size_t gcd(size_t a, size_t b) {$/;"	f
+gcd2	euclid.c	/^size_t gcd2(size_t a, size_t b) {$/;"	f
+gcd2	rational.c	/^size_t gcd2(size_t a, size_t b) {$/;"	f
+hexatridecimal	hexatridecimal.c	/^unsigned hexatridecimal(int a) {$/;"	f
+leapyear	year.c	/^bool leapyear(unsigned year) {$/;"	f
+main	bool.c	/^int main (){$/;"	f
+main	calc.c	/^int main () {$/;"	f
+main	common.c	/^int main() {$/;"	f
+main	define_c.c	/^int main () {$/;"	f
+main	enum.c	/^int main () {$/;"	f
+main	euclid.c	/^int main() {$/;"	f
+main	fgets.c	/^int main() {$/;"	f
+main	fibonnacci.c	/^int main() {$/;"	f
+main	file_opne.c	/^int main (int argc, char * argv[argc + 1]) {$/;"	f
+main	hexatridecimal.c	/^int main() {$/;"	f
+main	magic_enum.c	/^int main () {$/;"	f
+main	max.c	/^int main () {$/;"	f
+main	not_eq.c	/^int main() {$/;"	f
+main	puts.c	/^int  main  () {$/;"	f
+main	rational.c	/^int main () {$/;"	f
+main	stdout_file.c	/^int main(int argc, char * argv[argc + 1]) {$/;"	f
+main	time.c	/^int main () {$/;"	f
+main	year.c	/^int main() {$/;"	f
+my_print2	define_c.c	3;"	d	file:
+my_sql_init	common.c	/^int my_sql_init (sqlite3 *db, sqlite3_stmt * stmt){$/;"	f
+num	rational.h	/^	size_t num;$/;"	m	struct:rat
+printenv	getenv.c	/^void printenv(char const name[static 1]) {$/;"	f
+puts_safe	puts.c	/^void puts_safe(char const s[static 1]){$/;"	f
+rat	rational.h	/^struct rat {$/;"	s
+rat	rational.h	/^typedef struct rat rat;$/;"	t	typeref:struct:rat
+rat_get	rational.c	/^rat rat_get (long long num, unsigned long long denom){$/;"	f
+rat_get_extended	rational.c	/^rat rat_get_extended(rat x, size_t f) {$/;"	f
+rat_get_normal	rational.c	/^rat rat_get_normal(rat x) {$/;"	f
+rat_get_prod	rational.c	/^rat rat_get_prod(rat x, rat y) {$/;"	f
+rat_get_sum	rational.c	/^rat rat_get_sum(rat x, rat y) {$/;"	f
+sign	rational.h	/^	bool sign;$/;"	m	struct:rat
+time_set_yday	year.c	/^struct tm time_set_yday(struct tm t) {$/;"	f
