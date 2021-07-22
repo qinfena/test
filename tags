@@ -41,8 +41,10 @@ main	not_eq.c	/^int main() {$/;"	f
 main	puts.c	/^int  main  () {$/;"	f
 main	rational.c	/^int main () {$/;"	f
 main	stdout_file.c	/^int main(int argc, char * argv[argc + 1]) {$/;"	f
+main	sum.c	/^int main() {$/;"	f
 main	time.c	/^int main () {$/;"	f
 main	year.c	/^int main() {$/;"	f
+matrix_mult	matrix_mult.c	/^void matrix_mult(size_t n, size_t k, size_t m,$/;"	f
 my_print2	define_c.c	3;"	d	file:
 my_sql_init	common.c	/^int my_sql_init (sqlite3 *db, sqlite3_stmt * stmt){$/;"	f
 num	rational.h	/^	size_t num;$/;"	m	struct:rat
@@ -50,10 +52,21 @@ printenv	getenv.c	/^void printenv(char const name[static 1]) {$/;"	f
 puts_safe	puts.c	/^void puts_safe(char const s[static 1]){$/;"	f
 rat	rational.h	/^struct rat {$/;"	s
 rat	rational.h	/^typedef struct rat rat;$/;"	t	typeref:struct:rat
+rat_destroy	rational.c	/^void rat_destroy(rat *rp) {$/;"	f
+rat_extend	rational.c	/^rat* rat_extend(rat* rp, size_t f){$/;"	f
 rat_get	rational.c	/^rat rat_get (long long num, unsigned long long denom){$/;"	f
 rat_get_extended	rational.c	/^rat rat_get_extended(rat x, size_t f) {$/;"	f
 rat_get_normal	rational.c	/^rat rat_get_normal(rat x) {$/;"	f
 rat_get_prod	rational.c	/^rat rat_get_prod(rat x, rat y) {$/;"	f
 rat_get_sum	rational.c	/^rat rat_get_sum(rat x, rat y) {$/;"	f
+rat_init	rational.c	/^rat* rat_init (rat *rp,$/;"	f
+rat_normalize	rational.c	/^rat* rat_normalize(rat* rp) {$/;"	f
+rat_rma	rational.c	/^rat* rat_rma(rat* rp, rat x, rat y) {$/;"	f
+rat_sumup	rational.c	/^rat* rat_sumup(rat* rp, rat y) {$/;"	f
 sign	rational.h	/^	bool sign;$/;"	m	struct:rat
+sum0	sum.c	/^double sum0(size_t len, double const* a) {$/;"	f
+sum1	sum.c	/^double sum1(size_t len, double const* a) {$/;"	f
+sum2	sum.c	/^double sum2(size_t len, double const* a) {$/;"	f
+sum3	sum.c	/^double sum3(size_t len, double const* a) {$/;"	f
+sum4	sum.c	/^double sum4(size_t len, double const* a) {$/;"	f
 time_set_yday	year.c	/^struct tm time_set_yday(struct tm t) {$/;"	f

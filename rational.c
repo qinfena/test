@@ -68,6 +68,46 @@ rat rat_get_sum(rat x, rat y) {
 	}
 	return rat_get_normal(x);
 }
+void rat_destroy(rat *rp) {
+	if (rp) *rp = (rat) {0 };
+}
+rat* rat_init (rat *rp,
+		long long num,
+		unsigned long long denom) {
+	if (rp) *rp = rat_get(num, denom);
+	return rp;
+}
+
+rat* rat_normalize(rat* rp) {
+	if (rp) *rp = rat_get_normal(*rp);
+	return rp;
+}
+rat* rat_extend(rat* rp, size_t f){
+	if (rp) *rp = rat_get_extended(*rp, f);
+	return rp;
+}
+
+rat* rat_sumup(rat* rp, rat y) {
+	size_t c = gcd(rp->denom, y.denom);
+	size_t ax = y.denom/c;
+	size_t bx = rp->denom/c;
+	rat_extend(rp, ax);
+	y = rat_get_extended(y,bx);
+	assert(rp->denom == y.denom);
+
+	if (rp->sign == y.sign) {
+		rp->num += y.num;
+	} else if (rp->num > y.num) {
+		rp->num -= y.num;
+	} else {
+		rp->num = y.num - rp->num;
+		rp->sign = !rp->sign;
+	}
+	return rat_normalize(rp);
+}
+rat* rat_rma(rat* rp, rat x, rat y) {
+	return rat_sumup(rp, rat_get_prod(x,y));
+}
 
 int main () {
 	return EXIT_SUCCESS;
