@@ -109,6 +109,34 @@ rat* rat_rma(rat* rp, rat x, rat y) {
 	return rat_sumup(rp, rat_get_prod(x,y));
 }
 
+rat const* myRat = rat_init(malloc(sizeof(rat)), 13, 7);
+
+rat* rat_new(long long numerator,
+		unsigned long long denomination) {
+	return rat_init (malloc(sizeof(rat)).
+			numerator,
+			denominator);
+}
+
+rat const* myRat = rat_new(13, 7);
+
+#define P99_NEW(T, ...) T ## _init(malloc(sizeof(T)), __VA_ARGS__)
+
+rat const* myRat = P99_NEW(rat, 13, 7);
+
+rat* rat_vinit(size_t n, rat p[n]) {
+	if (p) 
+		for (size_t i = 0; i < n; ++i) 
+			rat_init(p+i, 0, i);
+	return p;
+}
+
+rat* myRatVec = rat_vinit(44, malloc(sizeof(rat[44])));
+
+rat* rat_vnew(size_t size) {
+	return rat_vinit(size, malloc(sizeof(rat[size])));
+}
+
 int main () {
 	return EXIT_SUCCESS;
 }

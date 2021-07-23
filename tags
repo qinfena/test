@@ -7,13 +7,21 @@
 CORVID_NAME	enum.c	4;"	d	file:
 DAYS_DEFORE	year.c	10;"	d	file:
 MAX	test.h	4;"	d
+P99_NEW	rational.c	123;"	d	file:
 RATIONAL_H	rational.h	2;"	d
 Strtoul	hexatridecimal.c	/^unsigned long Strtoul (char const s[static 1], unsigned base) {$/;"	f
 Strtoul_inner	hexatridecimal.c	/^unsigned long Strtoul_inner(char const s[static 1],$/;"	f
 __TEST_H__	test.h	2;"	d
+bsearch_unsigned	compare.c	/^unsigned const* bsearch_unsigned(unsigned const key[static 1],$/;"	f
 buf_max	stdout_file.c	/^enum {buf_max = 32, };$/;"	e	enum:__anon1	file:
+cdb1	align.c	/^typedef complex double cdb1;$/;"	t	file:
+compare_int	compare.c	/^int compare_int (void const* a, void const* b) {$/;"	f
+compare_unsigned	compare.c	/^int compare_unsigned (void const* a, void const* b){$/;"	f
 denom	rational.h	/^	size_t denom;$/;"	m	struct:rat
+draw_sep	mbstring-main.c	/^void draw_sep(char const start[static 1],$/;"	f
+fgetline	numberline.c	/^char* fgetline(size_t size, char s[restrict size],$/;"	f
 fgets_manually	fgets.c	/^char * fgets_manually(char s[restrict], int n,$/;"	f
+fgoto	fgoto.asm	/^fgoto:$/;"	l
 fib	fibonnacci.c	/^size_t fib(size_t n) {$/;"	f
 fib2	fibonnacci.c	/^size_t fib2(size_t n) {$/;"	f
 fib2rec	fibonnacci.c	/^void fib2rec(size_t n, size_t buf[2]){$/;"	f
@@ -24,13 +32,20 @@ gcd	rational.c	/^size_t gcd(size_t a, size_t b) {$/;"	f
 gcd2	euclid.c	/^size_t gcd2(size_t a, size_t b) {$/;"	f
 gcd2	rational.c	/^size_t gcd2(size_t a, size_t b) {$/;"	f
 hexatridecimal	hexatridecimal.c	/^unsigned hexatridecimal(int a) {$/;"	f
+i	extern.c	/^unsigned i = 1;$/;"	v
 leapyear	year.c	/^bool leapyear(unsigned year) {$/;"	f
+logger	compare.c	/^logger_function* logger = logger_ignore;$/;"	v
+logger_ignore	compare.c	/^int logger_ignore(char const*, ...){$/;"	f	file:
+loggers	compare.c	/^logger_function* loggers = {$/;"	v	file:
+main	align.c	/^int main(void) {$/;"	f
 main	bool.c	/^int main (){$/;"	f
 main	calc.c	/^int main () {$/;"	f
 main	common.c	/^int main() {$/;"	f
+main	compare.c	/^int main ( ) {$/;"	f
 main	define_c.c	/^int main () {$/;"	f
 main	enum.c	/^int main () {$/;"	f
 main	euclid.c	/^int main() {$/;"	f
+main	extern.c	/^int main (void) {$/;"	f
 main	fgets.c	/^int main() {$/;"	f
 main	fibonnacci.c	/^int main() {$/;"	f
 main	file_opne.c	/^int main (int argc, char * argv[argc + 1]) {$/;"	f
@@ -38,6 +53,7 @@ main	hexatridecimal.c	/^int main() {$/;"	f
 main	magic_enum.c	/^int main () {$/;"	f
 main	max.c	/^int main () {$/;"	f
 main	not_eq.c	/^int main() {$/;"	f
+main	numberline.c	/^int main() {$/;"	f
 main	puts.c	/^int  main  () {$/;"	f
 main	rational.c	/^int main () {$/;"	f
 main	stdout_file.c	/^int main(int argc, char * argv[argc + 1]) {$/;"	f
@@ -45,11 +61,18 @@ main	sum.c	/^int main() {$/;"	f
 main	time.c	/^int main () {$/;"	f
 main	year.c	/^int main() {$/;"	f
 matrix_mult	matrix_mult.c	/^void matrix_mult(size_t n, size_t k, size_t m,$/;"	f
+myRat	rational.c	/^rat const* myRat = P99_NEW(rat, 13, 7);$/;"	v
+myRat	rational.c	/^rat const* myRat = rat_init(malloc(sizeof(rat)), 13, 7);$/;"	v
+myRat	rational.c	/^rat const* myRat = rat_new(13, 7);$/;"	v
+myRatVec	rational.c	/^rat* myRatVec = rat_vinit(44, malloc(sizeof(rat[44])));$/;"	v
 my_print2	define_c.c	3;"	d	file:
 my_sql_init	common.c	/^int my_sql_init (sqlite3 *db, sqlite3_stmt * stmt){$/;"	f
 num	rational.h	/^	size_t num;$/;"	m	struct:rat
+numberline	numberline.c	/^size_t* numberline(size_t size, char const lbuf[restrict size],$/;"	f
+numberline_inner	numberline.c	/^size_t numberline_inner(char const*restrict act,$/;"	f	file:
 printenv	getenv.c	/^void printenv(char const name[static 1]) {$/;"	f
 puts_safe	puts.c	/^void puts_safe(char const s[static 1]){$/;"	f
+qsort_unsigned	compare.c	/^void qsort_unsigned(size_t nmeb, unsigned base[nmeb]) {$/;"	f
 rat	rational.h	/^struct rat {$/;"	s
 rat	rational.h	/^typedef struct rat rat;$/;"	t	typeref:struct:rat
 rat_destroy	rational.c	/^void rat_destroy(rat *rp) {$/;"	f
@@ -60,10 +83,14 @@ rat_get_normal	rational.c	/^rat rat_get_normal(rat x) {$/;"	f
 rat_get_prod	rational.c	/^rat rat_get_prod(rat x, rat y) {$/;"	f
 rat_get_sum	rational.c	/^rat rat_get_sum(rat x, rat y) {$/;"	f
 rat_init	rational.c	/^rat* rat_init (rat *rp,$/;"	f
+rat_new	rational.c	/^rat* rat_new(long long numerator,$/;"	f
 rat_normalize	rational.c	/^rat* rat_normalize(rat* rp) {$/;"	f
 rat_rma	rational.c	/^rat* rat_rma(rat* rp, rat x, rat y) {$/;"	f
 rat_sumup	rational.c	/^rat* rat_sumup(rat* rp, rat y) {$/;"	f
+rat_vinit	rational.c	/^rat* rat_vinit(size_t n, rat p[n]) {$/;"	f
+rat_vnew	rational.c	/^rat* rat_vnew(size_t size) {$/;"	f
 sign	rational.h	/^	bool sign;$/;"	m	struct:rat
+sprintnumbers	numberline.c	/^int sprintnumbers(size_t tot, char buf[restrict tot],$/;"	f
 sum0	sum.c	/^double sum0(size_t len, double const* a) {$/;"	f
 sum1	sum.c	/^double sum1(size_t len, double const* a) {$/;"	f
 sum2	sum.c	/^double sum2(size_t len, double const* a) {$/;"	f
